@@ -6,7 +6,6 @@ class SessionController < ApplicationController
   end
   #post
   def create
-    puts(params[:session])
     @user = User.find_by(user_params)
     if (@user == nil)
       flash.keep[:notice] = "User not found"
@@ -15,6 +14,7 @@ class SessionController < ApplicationController
     session[:user] = @user
     redirect_to '/dashboard'
   end
+  
   def user_params
     params.require(:session).permit(:email, :password)
   end

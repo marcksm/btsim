@@ -1,7 +1,20 @@
 class UsersController < ApplicationController
   #get
   def new
-    
+
+  end
+
+  #post
+  def create
+    @user = User.new(user_params)
+    @user.save!
+    puts (@user)
+    session[:user] = @user
+    redirect_to '/dashboard' and return
+  end
+
+  def user_params
+    params.require(:session).permit(:email, :password)
   end
 
   def edit
