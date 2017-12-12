@@ -27,7 +27,7 @@
                         <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                             <div class="input-group-addon" style="width: 6.0rem">Name <i class=""></i></div>
 
-                            <%= f.text_field :name, class: 'form-control', value: '' %>
+                            <%= f.text_field :name, class: 'form-control', value: '', required: true %>
 
                         </div>
                     </div>
@@ -42,7 +42,7 @@
                         <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                                                         <div class="input-group-addon" style="width: 6.0rem">Email <i class=""></i></div>
 
-                            <%= f.email_field :email, class: 'form-control', value: 'example@bt.com' %>
+                            <%= f.email_field :email, class: 'form-control', placeholder: 'example@bt.com',required: true %>
 
                         </div>
                     </div>
@@ -57,7 +57,7 @@
                         <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                             <div class="input-group-addon" style="width: 6.0rem">Country <i class=""></i></div>
 
-                            <%= f.text_field :country, class: 'form-control', value: '' %>
+                            <%= f.text_field :country, class: 'form-control', value: '', required: true %>
 
                         </div>
                     </div>
@@ -72,7 +72,7 @@
                         <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                         <div class="input-group-addon" style="width: 6.0rem">Password <i class=""></i></div>
 
-                            <%= f.password_field :password, class: 'form-control', value: 'passwordfield'%>
+                            <%= f.password_field :password, class: 'form-control', value: '', required: true%>
                         </div>
                     </div>
                 </div>
@@ -81,18 +81,6 @@
                         <span class="text-danger align-middle">
                         <!-- Put password error message here -->
                         </span>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-3"></div>
-                <div class="col-md-6" style="padding-top: .35rem">
-                    <div class="form-check mb-2 mr-sm-2 mb-sm-0">
-                        <label class="form-check-label">
-                            <input class="form-check-input" name="remember"
-                                   type="checkbox" >
-                            <span style="padding-bottom: .15rem">Remember me</span>
-                        </label>
                     </div>
                 </div>
             </div>
