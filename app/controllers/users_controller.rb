@@ -14,7 +14,7 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:session).permit(:email, :password)
+    params.require(:session).permit(:email, :password, :country, :name)
   end
 
   def edit
