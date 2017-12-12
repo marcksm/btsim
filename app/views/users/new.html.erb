@@ -23,9 +23,24 @@
                 <div class="col-md-3"></div>
                 <div class="col-md-6">
                     <div class="form-group has-danger">
+                        <label class="sr-only" for="">Name</label>
+                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                            <div class="input-group-addon" style="width: 6.0rem">Name <i class=""></i></div>
+
+                            <%= f.text_field :name, class: 'form-control', value: '' %>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="form-group has-danger">
                         <label class="sr-only" for="email">E-Mail Address</label>
                         <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                            <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-at"></i></div>
+                                                        <div class="input-group-addon" style="width: 6.0rem">Email <i class=""></i></div>
 
                             <%= f.email_field :email, class: 'form-control', value: 'example@bt.com' %>
 
@@ -40,7 +55,7 @@
                     <div class="form-group">
                         <label class="sr-only" for="password">Password</label>
                         <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                            <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-key"></i></div>
+                                                        <div class="input-group-addon" style="width: 6.0rem">Password <i class=""></i></div>
 
                             <%= f.password_field :password, class: 'form-control', value: 'passwordfield'%>
                         </div>
@@ -71,7 +86,7 @@
                 <div class="col-md-6">
                     <%= f.submit "Sign up", class: "btn btn-success" %>
                     <% end %>
-                    <a class="btn btn-link" href="/password/reset">Forgot Your Password?</a>
+                    <a class="btn btn-link" href="/login">Already registered?</a>
                 </div>
             </div>
         </form>
