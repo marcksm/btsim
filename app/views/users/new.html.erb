@@ -52,10 +52,25 @@
             <div class="row">
                 <div class="col-md-3"></div>
                 <div class="col-md-6">
+                    <div class="form-group has-danger">
+                        <label class="sr-only" for="">Country</label>
+                        <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                            <div class="input-group-addon" style="width: 6.0rem">Country <i class=""></i></div>
+
+                            <%= f.text_field :country, class: 'form-control', value: '' %>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
                     <div class="form-group">
                         <label class="sr-only" for="password">Password</label>
                         <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                                        <div class="input-group-addon" style="width: 6.0rem">Password <i class=""></i></div>
+                        <div class="input-group-addon" style="width: 6.0rem">Password <i class=""></i></div>
 
                             <%= f.password_field :password, class: 'form-control', value: 'passwordfield'%>
                         </div>
