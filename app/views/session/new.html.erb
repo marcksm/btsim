@@ -19,7 +19,11 @@
         <div class="container">
           <h1> Log In</h1>
           <hr>
-
+          <% flash.each do |key, value| %>
+              <div class="<%= flash_class(key) %>">
+                    <%= value %>
+              </div>
+        <% end %>
             <%= form_for(:session, url: login_path) do |f| %>
             <div class="row">
                 <div class="col-md-3"></div>

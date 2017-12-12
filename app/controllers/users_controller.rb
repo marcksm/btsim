@@ -7,6 +7,10 @@ class UsersController < ApplicationController
   #post
   def create
     @user = User.new(user_params)
+    if (isAlready_User == true)
+      flash[:error] = "Email already registered"
+      redirect_to '/signup' and return
+    end
     @user.save!
     puts (@user)
     session[:user] = @user
@@ -17,6 +21,12 @@ class UsersController < ApplicationController
     params.require(:session).permit(:email, :password, :country, :name)
   end
 
+  def isAlready_User
+    if (User.all.find_by_email(@user.email))
+      return true
+    end
+    return false
+  end
   def edit
   end
 
@@ -25,5 +35,5 @@ class UsersController < ApplicationController
 
   def list
   end
-  
+
 end
