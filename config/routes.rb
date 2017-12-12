@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   get 'users/list'
 
+  get '/', to: 'session#new'
+
   get 'login', to: 'session#new'
 
   post 'login', to: 'session#create'
