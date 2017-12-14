@@ -7,4 +7,11 @@ module ApplicationHelper
         when "alert" then "alert alert-warning"
     end
   end
+  def current_user
+    if (session[:user] != nil)
+      user = session[:user]
+      return user.id
+    end
+    return -1
+  end
 end
